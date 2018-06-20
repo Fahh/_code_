@@ -1,0 +1,25 @@
+.full-height {
+    height: 100%;
+}
+
+/* Sets the actual background images to adorable kitties. This part is crucial. */
+.bg {
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.bg1 {
+    background-image: url('../pictures/img1.jpg');
+}
+
+.bg2 {
+    background-image: url('../pictures/img2.jpg');
+}
+
+.bg3 {
+    background-image: url('../pictures/img3.jpg');
+}
+
+.bg4 {
+    background-image: url('../pictures/img4.jpg');
+}

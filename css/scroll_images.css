@@ -1,0 +1,48 @@
+
+.wrapper-scroll {
+    position: relative;
+    width: 100%;
+    background: white;
+    height: 100%;
+}
+.container-scroll {
+    overflow-y: scroll;
+}
+.container-scroll::-webkit-scrollbar {
+    display: none;
+}
+/*.wrapper{*/
+    /*overflow-y: scroll;*/
+/*}*/
+.window {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    height: 100vh;
+    /*padding: 10px;*/
+}
+.rounded {
+    width: 100%;
+    position: absolute;
+    /*border-radius: 50%;*/
+}
+.square {
+    position: absolute;
+    left: 50%;
+    width: 80%;
+    transform: translateX(-50%);
+}
+.rounded img {
+    width: 100%;
+    -webkit-clip-path: ellipse(0px 0px at 100% 100%);
+    clip-path: ellipse(0px 0px at 100% 100%);
+    object-fit: cover;
+    height: 100%;
+}
+
+.square img {
+    width: 100%;
+    -webkit-clip-path: inset(100% 100% 100% 100%);
+    clip-path: inset(100% 100% 100% 100%);
+
+}

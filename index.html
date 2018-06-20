@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>test</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+    <link rel='stylesheet prefetch'href='https://fonts.googleapis.com/css?family=Open+Sans:600|Lobster+Two:700'>
+    <link rel='stylesheet prefetch' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css'>
+    <link rel='stylesheet prefetch' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css'>
+    <link rel='stylesheet prefetch' href='https://fonts.googleapis.com/css?family=Open+Sans'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.3/css/swiper.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+    <script src="https://jsconsole.com/js/remote.js?7fc0dc96-ab1f-4d62-9c33-88dc3ce71b94"></script>
+
+    <link rel="stylesheet" href="css/navigation_style.css">
+    <link rel="stylesheet" href="css/home_style.css">
+    <link rel="stylesheet" href="css/ribbon_style.css">
+    <link rel="stylesheet" href="css/clothes_style.css">
+    <link rel="stylesheet" href="css/formulaire_style.css">
+    <link rel="stylesheet" href="css/about_style.css">
+    <link rel="stylesheet" href="css/swipe_style.css">
+    <link rel="stylesheet" href="css/images_style.css">
+    <link rel="stylesheet" href="css/social_icons_style.css">
+    <link rel="stylesheet" href="css/scroll_images.css">
+</head>
+<body>
+<!-- <div id="murDroit"></div>
+<div id="murGauche"></div> -->
+<svg id="vector-canvas"></svg>
+<div class="wrapper">
+
+    <nav class="grid-container">
+        <ul class="navBar">
+            <li class="item1" data-rel="1" class="active"><h1>evanbenjamin</h1></li>
+            <li class="item2" data-rel="2"><h2>Play</h2></li>
+            <li class="item3" data-rel="3"><h2>Clothes</h2></li>
+            <li class="item4" data-rel="4"><h2>About</h2></li>
+        </ul>
+    </nav>
+
+    <!--  //////        section 1   IMAGE SCROLL      //////   -->
+    <section id="section1">
+
+        <div class="container-scroll">
+          <div class='box'>
+            <div class='inner'></div>
+          </div>
+
+            <div class="wrapper-scroll">
+                <div class="window">
+                  <div id="collection_txt"><h3>Spring - Summer<br> </br> Collection </br> 2018<h3></div>
+
+                  <!-- <div id="scroll_txt"><h2>Scroll up!<h2></div> -->
+
+                    <div class="rounded" data-start="1" data-position="top-left">
+                        <img src="pictures/img1.jpg" alt="">
+                    </div>
+                    <div class="rounded" data-start="3" data-position="bottom-right">
+                        <img src="pictures/img2.jpg" alt="">
+                    </div>
+                    <div class="square" data-start="2">
+                        <img src="pictures/img18.jpg" alt="">
+                    </div>
+                    <div class="rounded" data-start="5" data-position="bottom-right">
+                        <img src="pictures/img5.jpg" alt="">
+                    </div>
+                    <div class="rounded" data-start="5" data-position="top-left">
+                        <img src="pictures/img6.jpg" alt="">
+                    </div>
+                    <div class="rounded" data-start="7" data-position="bottom-right">
+                        <img src="pictures/img10.jpg" alt="">
+                    </div>
+                    <div class="square" data-start="6">
+                        <img src="pictures/img24.jpg" alt="">
+                    </div>
+                    <div class="rounded" data-start="9" data-position="top-left">
+                        <img src="pictures/img21.jpg" alt="">
+                    </div>
+                    <div class="rounded" data-start="9" data-position="top-right" data-delay="50">
+                        <img src="pictures/img8.jpg" alt="">
+                    </div>
+                    <div class="square" data-start="10" data-end="false">
+                        <img src="pictures/img32.jpg" alt="">
+                    </div>
+                    <div class="rounded" data-start="12" data-position="bottom-left" data-delay="30">
+                        <img src="pictures/img50.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Slider main container -->
+
+    </section>
+
+    <!--  //////////////  section 2   //////////////   -->
+    <section>
+      <!-- <div class="ribbon-container"> -->
+
+  <!-- .......      with ribbon.js      ............ -->
+
+            <!-- <video id="myVideo">
+                <source type="video/mp4">
+                <source type="video/ogg">
+            </video> -->
+
+            <!-- <div class="container_swipe_vid"> -->
+                <!-- <video id="myVideo">
+                    <source type="video/mp4">
+                    <source type="video/ogg">
+                </video> -->
+  <!-- .......................................... -->
+
+          <div class="ribbon-container">
+
+        <video id="myVideo">
+        <source src="vids/violet.mp4" type="video/mp4">
+        <source src="vids/violet.ogg" type="video/ogg">
+        </video>
+
+        <div id="scrollDIV">
+        </div>
+
+                <!-- <a href="#prevVid" class="prevVid"></a>
+                <a href="#nextVid" class="nextVid"></a>
+    </div> -->
+
+            <!-- <div class="divBackground">
+                <img id="imgBackground" src="pictures/img2.jpg">
+            </div> -->
+      <!-- </div> -->
+
+    </section>
+
+    <!--  //////////////  section 3   //////////////   -->
+    <section>
+
+        <div class="selection-container">
+            <div class="container_button">
+                <button id="hommeButton"><h2>Men</h2></button>
+                <button id="femmeButton"><h2>Women</h2></button>
+            </div>
+
+            <div id="composition-container">
+                <div id="grid-homme" class="Homme-grid">
+                    <div class="ba-width-1-3 "><img id="picture" src="img_vet/7.jpg" data-id="7" data-type="bas" class="interactive"></div>
+                    <div class="ba-width-1-3 "><img id="picture" src="img_vet/A.jpg" data-id="A" data-type="haut" class="interactive"></div>
+                    <div class="ba-width-1-3 "><img id="picture" src="img_vet/1.jpg" data-id="1" data-type="bas" class="interactive"></div>
+                    <div class="ba-width-1-3 "><img id="picture" src="img_vet/B.jpg" data-id="B" data-type="haut" class="interactive"></div>
+                    <div class="ba-width-1-3 "><img id="picture" src="img_vet/2.jpg" data-id="2" data-type="bas" class="interactive"></div>
+                    <div class="ba-width-1-3 "><img id="picture" src="img_vet/C.jpg" data-id="C" data-type="haut" class="interactive"></div>
+                    <div class="ba-width-1-3 "><img id="picture" src="img_vet/3.jpg" data-id="3" data-type="bas" class="interactive"></div>
+                    <div class="ba-width-1-3 "><img id="picture" src="img_vet/D.jpg" data-id="D" data-type="haut" class="interactive"></div>
+                    <div class="ba-width-1-3 "><img id="picture" src="img_vet/8.jpg" data-id="8" data-type="bas" class="interactive"></div>
+                    <div class="ba-width-1-3 "><img id="picture" src="img_vet/E.jpg" data-id="E" data-type="haut" class="interactive"></div>
+                    <div class="ba-width-1-3 "><img id="picture" src="img_vet/4.jpg" data-id="4" data-type="bas" class="interactive"></div>
+                    <div class="ba-width-1-3 "><img id="picture" src="img_vet/F.jpg" data-id="F" data-type="haut" class="interactive"></div>
+                    <div class="ba-width-1-3 "><img id="picture" src="img_vet/5.jpg" data-id="5" data-type="bas" class="interactive"></div>
+                    <div class="ba-width-1-3 "><img id="picture" src="img_vet/G.jpg" data-id="G" data-type="haut" class="interactive"></div>
+                    <div class="ba-width-1-3 "><img id="picture" src="img_vet/6.jpg" data-id="6" data-type="bas" class="interactive"></div>
+                </div>
+
+                <div id="grid-femme" class="Femme-grid" style="display:none">
+                    <div class="ba-width-1-3"><img id="picture" src="img_vet/10.jpg" data-id="10" data-type="bas" class="interactive"></div>
+                    <div class="ba-width-1-3"><img id="picture" src="img_vet/I.jpg" data-id="I" data-type="haut" class="interactive"></div>
+                    <div class="ba-width-1-3"><img id="picture" src="img_vet/O.jpg" data-id="O" data-type="uniq" class="interactive"></div>
+                    <div class="ba-width-1-3"><img id="picture" src="img_vet/J.jpg" data-id="J" data-type="haut" class="interactive"></div>
+                    <div class="ba-width-1-3"><img id="picture" src="img_vet/11.jpg" data-id="11" data-type="bas" class="interactive"></div>
+                    <div class="ba-width-1-3"><img id="picture" src="img_vet/K.jpg" data-id="K" data-type="haut" class="interactive"></div>
+                    <div class="ba-width-1-3"><img id="picture" src="img_vet/9.jpg" data-id="9" data-type="bas" class="interactive"></div>
+                    <div class="ba-width-1-3"><img id="picture" src="img_vet/L.jpg" data-id="L" data-type="haut" class="interactive"></div>
+                    <div class="ba-width-1-3"><img id="picture" src="img_vet/P.jpg" data-id="P" data-type="uniq" class="interactive"></div>
+                    <div class="ba-width-1-3"><img id="picture" src="img_vet/N.jpg" data-id="N" data-type="haut" class="interactive"></div>
+                    <div class="ba-width-1-3"><img id="picture" src="img_vet/Q.jpg" data-id="Q" data-type="uniq" class="interactive"></div>
+                    <div class="ba-width-1-3"><img id="picture" src="img_vet/M.jpg" data-id="M" data-type="haut" class="interactive"></div>
+                    <div class="ba-width-1-3"><img id="picture" src="img_vet/O.jpg" data-id="O" data-type="uniq" class="interactive"></div>
+                </div>
+            </div>
+        </div>
+
+        <div id="combo" class="combos">
+            <div id="buy"><h5>Request</h5></div>
+            <!--<img id="combo-img-simple" class="combo-img-simple" src="">-->
+
+            <div class="swiper-container-combo full-height">
+                <!-- Additional required wrapper -->
+                <div class="swiper-wrapper">
+                    <!-- Slides -->
+                    <div class="swiper-slide">
+                        <img id="combo-img" class="combo-img" src="">
+                    </div>
+                    <div class="swiper-slide">
+                        <img id="combo-img-reverse" class="combo-img-reverse" src="">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="orderForm" class="orderForm" style="display: none">
+            <div id="imgOrder-container">
+                <img id="orderTop" src=" ">
+                <img id="orderBottom" src=" ">
+            </div>
+            <!-- Les champs du formulaire-->
+            <form id="formulaire_contact" class="contact-form">
+                <div class="name">
+                    <!-- <label for="name">Full Name</label> -->
+                    <input name="name" type="text" id="name" placeholder="Full Name" required onkeyup="validateForm()"/>
+                </div>
+
+                <div class="email">
+                    <!-- <label for="email">Email</label> -->
+                    <input name="to" type="email" id="email" placeholder="Email" onkeyup="validateForm()"/>
+                </div>
+
+                <div class="message">
+                    <!-- <label for="message">Message</label> -->
+                    <textarea name="message" id="message" placeholder="Message" onkeyup="validateForm()"></textarea>
+                </div>
+
+                <input type="hidden" id="topImage" name="topImage">
+                <input type="hidden" id="bottomImage" name="bottomImage">
+
+              <div id="buttonContainer">
+                    <div class="back">
+                      <div id="backButton" class="button"><h5>back</h5></div>
+                    </div>
+
+                    <div class="submit">
+                        <!-- <p class="user-message">Message to the user.</p> -->
+                        <input type="button" id="submitButton" disabled="true" value="Send" class="button"/>
+                    </div>
+                </div>
+
+                <div  id="Sent-page" class="sent-container">
+                  <div class="Sent">
+                    <div id="sentButton" class="buttonBackHome"><h5>Ok</h5></div>
+                  </div>
+                  <div id="sent-text"><h2>Your message has been correctly sent!<h2></div>
+               </div>
+            </form>
+        </div>
+    </section>
+
+    <!--  //////////////  section 4   //////////////   -->
+    <section>
+
+      <div class="container-about">
+        <div id="container-portrait">
+            <div id="portrait1-container">
+                <img id="portrait" src="portrait/be.jpg">
+                <div id="name"><h2> Benjamin Buhler</h2></div>
+                <div id="text"><p>Benjamin is a 23 years old designer from Tolochenaz, Switzerland. After studying fashion design in Switzerland, he attended the "École de la Chambre Syndicale de la Couture" during two years in Paris. At the end of his studies, he obtained an internship at the prestigious fashion house Schiaparelli.</p> </div>
+            </div>
+
+            <div id="portrait2-container">
+                <img id="portrait" src="portrait/ev.jpg">
+                <div id="name"><h2>Evan Giusto</h2></div>
+                <div id="text"><p> Evan is a 24 year old designer from Neuchâtel, Switzerland. He studied at the EAA (Ecole d'arts appliqués à La Chaux-de-Fonds (CH)) during four years. After his studies he started working in the watchmaking industry, but continues to pursue his interest in couture as a designer and a model.
+                  </p> </div>
+            </div>
+        </div>
+
+      <div id="social-caintainer">
+        <div align="center" class="container-socialbtns">
+            <ul>
+            <li><a href="https://www.facebook.com/Evanbenjamin-186094201993760/" class="fa fa-lg fa-facebook"></a></li>
+            <li><a href="https://www.instagram.com/_evanbenjamin/" class="fa fa-lg fa-instagram"></a></li>
+            <li><a href="https://www.pinterest.fr/benjaminbhler/?eq=benjamin%20buhler&etslf=5165" class="fa fa-lg fa-pinterest"></a></li>
+            <li><a href="#" class="fa fa-lg fa-linkedin"></a></li>
+            </ul>
+        </div>
+      </div>
+
+      </div>
+    </section>
+
+</div>
+<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
+<!--<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.3/js/swiper.min.js"></script>-->
+<script type="text/javascript" src="js/swiper.js"></script>
+<script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+<script type="text/javascript">
+    (function(){
+        emailjs.init("user_7QwnUKDqdLxVgO2KWUsHl");
+    })();
+</script>
+<script src="js/jquery-3.3.1.min.js"></script>
+<script src="js/scroll.js"></script>
+
+<script src="js/navigation.js"></script>
+<script src="js/home.js"></script>
+<script src="js/ribbon2.js"></script>
+<script src="js/clothes2.js"></script>
+<script src="js/formulaire.js"></script>
+
+</body>
+</html>
