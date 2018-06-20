@@ -7,6 +7,7 @@
 }
 .container-scroll {
     overflow-y: scroll;
+    overflow-x: hidden;
 }
 .container-scroll::-webkit-scrollbar {
     display: none;

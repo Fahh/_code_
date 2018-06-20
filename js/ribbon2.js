@@ -55,7 +55,6 @@ function updatevid(mapVideoPositon) {
         console.log(mapVideoPositon);
         $videos[INDEX].currentTime = mapVideoPositon;
         console.log($videos[INDEX].currentTime);
-
         console.groupEnd();
     }
 }
