@@ -99,41 +99,59 @@
     </section>
 
     <!--  //////////////  section 2   //////////////   -->
-    <section>
-      <!-- <div class="ribbon-container"> -->
+    <section id="section_2">
+        <!-- <div class="ribbon-container"> -->
 
-  <!-- .......      with ribbon.js      ............ -->
+        <!-- .......      with ribbon.js      ............ -->
 
-            <!-- <video id="myVideo">
-                <source type="video/mp4">
-                <source type="video/ogg">
-            </video> -->
+        <!-- <video id="myVideo">
+            <source type="video/mp4">
+            <source type="video/ogg">
+        </video> -->
 
-            <!-- <div class="container_swipe_vid"> -->
-                <!-- <video id="myVideo">
-                    <source type="video/mp4">
-                    <source type="video/ogg">
-                </video> -->
-  <!-- .......................................... -->
+        <!-- <div class="container_swipe_vid"> -->
+        <!-- <video id="myVideo">
+            <source type="video/mp4">
+            <source type="video/ogg">
+        </video> -->
+        <!-- .......................................... -->
 
-          <div class="ribbon-container">
-
-        <video id="myVideo">
-        <source src="vids/violet.mp4" type="video/mp4">
-        <source src="vids/violet.ogg" type="video/ogg">
-        </video>
-
-        <div id="scrollDIV">
+        <div class="ribbon-container">
+            <div id="slider-container">
+                <div class="video-container">
+                    <video class="video">
+                        <source src="vids/violet.mp4" type="video/mp4">
+                        <!--<source src="vids/violet.ogg" type="video/ogg">-->
+                    </video>
+                </div>
+                <div class="video-container">
+                    <video  class="video">
+                        <source src="vids/composition2.mp4" type="video/mp4">
+                        <!--<source src="vids/robe_rose.mp4" type="video/ogg">-->
+                    </video>
+                </div>
+                <div class="video-container">
+                    <video  class="video">
+                        <source src="vids/complet_rouge.mp4" type="video/mp4">
+                        <!--<source src="vids/" type="video/ogg">-->
+                    </video>
+                </div>
+                <div class="video-container">
+                    <video class="video">
+                        <source src="vids/complet_jeans.mp4" type="video/mp4">
+                        <!--<source src="vids/violet.ogg" type="video/ogg">-->
+                    </video>
+                </div>
+            </div>
+            <!--<div id="scrollDIV">-->
+            <!--</div>-->
+            <!-- <a href="#prevVid" class="prevVid"></a>
+            <a href="#nextVid" class="nextVid"></a>
+</div> -->
+            <div class="video-background">
+                <img id="video-img-background" src="pictures/img2.jpg">
+            </div>
         </div>
-
-                <!-- <a href="#prevVid" class="prevVid"></a>
-                <a href="#nextVid" class="nextVid"></a>
-    </div> -->
-
-            <!-- <div class="divBackground">
-                <img id="imgBackground" src="pictures/img2.jpg">
-            </div> -->
-      <!-- </div> -->
 
     </section>
 
@@ -281,8 +299,11 @@
     </section>
 
 </div>
-<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
+<!--<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>-->
 <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.3/js/swiper.min.js"></script>-->
+
+<script src="js/hammer.min.js"></script>
+<script src="js/jquery-3.3.1.min.js"></script>
 <script type="text/javascript" src="js/swiper.js"></script>
 <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
@@ -291,9 +312,7 @@
         emailjs.init("user_7QwnUKDqdLxVgO2KWUsHl");
     })();
 </script>
-<script src="js/jquery-3.3.1.min.js"></script>
 <script src="js/scroll.js"></script>
-
 <script src="js/navigation.js"></script>
 <script src="js/home.js"></script>
 <script src="js/ribbon2.js"></script>
