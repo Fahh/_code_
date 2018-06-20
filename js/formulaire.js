@@ -23,7 +23,9 @@ function sendMail() {
   console.log(template_params);
 
   emailjs.send(service_id, template_id, template_params).then(function() {
-    alert("Sent!");
+    // alert("Sent!");
+
+    document.getElementById("Sent-page").style.display = "block";
 
     var sentButton = document.querySelector("#sentButton");
     sentButton.addEventListener('click', displayMessageSent);
@@ -35,3 +37,13 @@ function sendMail() {
 }
 var submitBtn = document.querySelector("#submitButton");
 submitBtn.addEventListener('click', sendMail);
+
+$('.buttonBackHome').click(function() {
+  displayHome();
+})
+
+function displayHome() {
+  $(".container-scroll").show();
+  $("#sent-container").hide();
+  $("#orderForm").hide();
+}

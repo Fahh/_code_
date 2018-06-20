@@ -185,7 +185,7 @@ button:active {
 h5 {
   font-family: helvetica,sans-serif;
   color: black;
-  margin-top: 10%;
+  /* margin-top: 10%; */
   letter-spacing: 0.15em;
   font-weight: lighter;
   font-size: 1.75em;
