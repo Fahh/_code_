@@ -49,8 +49,14 @@ function updatevid(mapVideoPositon) {
 
             tmptime = 3;
         }
+        console.group('info video');
         console.log($videos[INDEX]);
+        console.log($videos[INDEX].currentTime);
+        console.log(mapVideoPositon);
         $videos[INDEX].currentTime = mapVideoPositon;
+        console.log($videos[INDEX].currentTime);
+
+        console.groupEnd();
     }
 }
 
@@ -95,6 +101,8 @@ var mapVideoPositon = 0;
 IS_IN_ANIMATION = false;
 $slider_container = $('#slider-container');
 var hammerDoc = new Hammer.Manager(document);
+
+
 var panl = new Hammer.Pan({
     event: 'panl',
     direction: Hammer.DIRECTION_LEFT
@@ -112,45 +120,7 @@ var vertical = new Hammer.Pan({
 // panr.requireFailure(vertical);
 
 hammerDoc.add([vertical, panl, panr]);
-hammerDoc.on('panv', checkPosition);
-hammerDoc.on('panl', function (e) {
-    console.log('panright');
-    if (INDEX >= 3 || IS_IN_ANIMATION) {
-        return;
-    }
-    console.log($slider_container);
-    var w = $('.ribbon-container').width();
-    var left = parseInt($slider_container.css('left'));
-    IS_IN_ANIMATION = true;
-    // $slider_container.css('left', w * (INDEX + 1));
 
-    $slider_container
-        .animate(
-            {'left': (w * (INDEX + 1)) * -1},
-            1000,
-            function () {
-                console.log('callBack right');
-                INDEX++;
-                IS_IN_ANIMATION = false;
-            });
-});
-hammerDoc.on('panr', function (e) {
-    console.log('panleft swipeleft');
-    if (INDEX <= 0 || IS_IN_ANIMATION) {
-        return;
-    }
-    IS_IN_ANIMATION = true;
-    var w = $('.ribbon-container').width();
-    $slider_container
-        .animate(
-            {'left': (w * (INDEX - 1)) * -1},
-            1000,
-            function () {
-                INDEX--;
-                console.log('callBack left');
-                IS_IN_ANIMATION = false;
-            });
-});
 // hammerDoc.get('pan').set({threshold: 10});
 
 
@@ -191,7 +161,46 @@ function checkPosition(e) {
 
 Number.prototype.map = function (in_min, in_max, out_min, out_max) {
     return (this - in_min) * (out_max - out_min) / (in_max - in_min) + out_min;
-}
+};
 // function map(num, in_min, in_max, out_min, out_max) {
 //   return (num - in_min) * (out_max - out_min) / (in_max - in_min) + out_min;
 // }
+
+
+function checkPanL(e) {
+    if (INDEX >= 3 || IS_IN_ANIMATION) {
+        return;
+    }
+    console.log($slider_container);
+    var w = $('.ribbon-container').width();
+    var left = parseInt($slider_container.css('left'));
+    IS_IN_ANIMATION = true;
+    // $slider_container.css('left', w * (INDEX + 1));
+
+    $slider_container
+        .animate(
+            {'left': (w * (INDEX + 1)) * -1},
+            1000,
+            function () {
+                console.log('callBack right');
+                INDEX++;
+                IS_IN_ANIMATION = false;
+            });
+}
+
+function checkPanR(e) {
+    if (INDEX <= 0 || IS_IN_ANIMATION) {
+        return;
+    }
+    IS_IN_ANIMATION = true;
+    var w = $('.ribbon-container').width();
+    $slider_container
+        .animate(
+            {'left': (w * (INDEX - 1)) * -1},
+            1000,
+            function () {
+                INDEX--;
+                console.log('callBack left');
+                IS_IN_ANIMATION = false;
+            });
+}
