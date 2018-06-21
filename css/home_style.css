@@ -23,3 +23,7 @@
 .bg4 {
     background-image: url('../pictures/img4.jpg');
 }
+
+div.rounded{
+  top:-1%;
+}

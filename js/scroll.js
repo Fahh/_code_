@@ -42,24 +42,24 @@ LAST_SCROLL_TOP = 0;
 
 
 function animateSquares() {
-    $squares.each(function(index) {
-        var el = $(this);
-        fixPositionAndSize(el, true);
-        var start = el.data('start');
-        animateSquare(el, start);
-    })
+  $squares.each(function(index) {
+    var el = $(this);
+    fixPositionAndSize(el, true);
+    var start = el.data('start');
+    animateSquare(el, start);
+  })
 }
 
 function animateRounds() {
-    $rounds.each(function(index) {
-        var el = $(this);
-        fixPositionAndSize(el);
-        var start = el.data('start');
-        var position = el.data('position');
-        var delay = el.data('delay');
-        delay = delay || 0;
-        animateRound(el, start, position, delay);
-    });
+  $rounds.each(function(index) {
+    var el = $(this);
+    fixPositionAndSize(el);
+    var start = el.data('start');
+    var position = el.data('position');
+    var delay = el.data('delay');
+    delay = delay || 0;
+    animateRound(el, start, position, delay);
+  });
 }
 
 
@@ -69,13 +69,13 @@ function animateRounds() {
  * @param isSquare
  */
 function fixPositionAndSize($el, isSquare) {
-    isSquare = isSquare !== undefined;
-    var top = isSquare
-        ? $container.scrollTop() + (($container.height() - $el.find('img').height()) / 2)
-        : $container.scrollTop();
+  isSquare = isSquare !== undefined;
+  var top = isSquare
+    ? $container.scrollTop() + (($container.height() - $el.find('img').height()) / 2)
+    : $container.scrollTop();
   $el.css({
-      'top': top,
-      'height': $container.height()
+    'top': top,
+    'height': $container.height()
   });
 }
 
@@ -87,21 +87,21 @@ function fixPositionAndSize($el, isSquare) {
  * @param delay
  */
 function animateRound(roundElem, startScreen, direction, delay) {
-    var scrollForScreen = getScrollForScreen(startScreen);
-    var v = scrollForScreen * speed_coeff;
-    if (delay) {
-        v = v - ($container.height()/100) * delay;
-    }
-    var position = getRoundPosition(direction);
-    if (screen_number >= startScreen) {
-        roundElem.find('img').css({
-            'clip-path': 'ellipse(' + v + 'px ' + v + 'px at ' + position +')'
-        });
-    } else if (screen_number < startScreen) {
-        roundElem.find('img').css({
-            'clip-path': 'ellipse(' + 0 + 'px ' + 0 + 'px at ' + position + ')'
-        });
-    }
+  var scrollForScreen = getScrollForScreen(startScreen);
+  var v = scrollForScreen * speed_coeff;
+  if (delay) {
+    v = v - ($container.height() / 100) * delay;
+  }
+  var position = getRoundPosition(direction);
+  if (screen_number >= startScreen) {
+    roundElem.find('img').css({
+      'clip-path': 'ellipse(' + v + 'px ' + v + 'px at ' + position + ')'
+    });
+  } else if (screen_number < startScreen) {
+    roundElem.find('img').css({
+      'clip-path': 'ellipse(' + 0 + 'px ' + 0 + 'px at ' + position + ')'
+    });
+  }
 }
 
 /**
@@ -110,71 +110,79 @@ function animateRound(roundElem, startScreen, direction, delay) {
  * @param startScreen
  */
 function animateSquare(squareElem, startScreen) {
-    var end = squareElem.data('end');
-    end = end === undefined ? true : end;
-    var scrollForScreen = getScrollForScreen(startScreen);
-    var percent = getPercent(scrollForScreen);
-    if (screen_number >= startScreen && screen_number < startScreen + 2) {
-        percent = percent / 2;
-        percent = percent < 0 ? 0 : percent > 50 ? 50 : percent;
-        percent =  50 - percent;
-        squareElem.find('img').css({'clip-path': 'inset(' + percent + '% '+  percent + '% ' +  percent + '% ' +  percent + '% )'});
-    } else if(screen_number === startScreen + 2 && end){
-        percent = percent - 200;
-        percent = percent / 2;
-        percent = percent < 0 ? 0 : percent > 50 ? 50 : percent;
-        squareElem.find('img').css({'clip-path': 'inset(' + percent + '% '+  percent + '% ' +  percent + '% ' +  percent + '% )'});
-    } else if(screen_number < startScreen || (screen_number > startScreen + 2 && end)) {
-        squareElem.find('img').css({'clip-path': 'inset(' + 50 + '% '+  50 + '% ' +  50 + '% ' +  50 + '% )'});
-    } else if (startScreen + 2 && !end || screen_number < startScreen) {
-        squareElem.find('img').css({'clip-path': 'inset(' + 0 + '% '+  0 + '% ' +  0 + '% ' +  0 + '% )'});
-    }
+  var end = squareElem.data('end');
+  end = end === undefined ? true : end;
+  var scrollForScreen = getScrollForScreen(startScreen);
+  var percent = getPercent(scrollForScreen);
+  if (screen_number >= startScreen && screen_number < startScreen + 2) {
+    percent = percent / 2;
+    percent = percent < 0 ? 0 : percent > 50 ? 50 : percent;
+    percent = 50 - percent;
+    squareElem.find('img').css({
+      'clip-path': 'inset(' + percent + '% ' + percent + '% ' + percent + '% ' + percent + '% )'
+    });
+  } else if (screen_number === startScreen + 2 && end) {
+    percent = percent - 200;
+    percent = percent / 2;
+    percent = percent < 0 ? 0 : percent > 50 ? 50 : percent;
+    squareElem.find('img').css({
+      'clip-path': 'inset(' + percent + '% ' + percent + '% ' + percent + '% ' + percent + '% )'
+    });
+  } else if (screen_number < startScreen || (screen_number > startScreen + 2 && end)) {
+    squareElem.find('img').css({
+      'clip-path': 'inset(' + 50 + '% ' + 50 + '% ' + 50 + '% ' + 50 + '% )'
+    });
+  } else if (startScreen + 2 && !end || screen_number < startScreen) {
+    squareElem.find('img').css({
+      'clip-path': 'inset(' + 0 + '% ' + 0 + '% ' + 0 + '% ' + 0 + '% )'
+    });
+  }
 }
 
 function checkScreenNumber() {
-    return Math.floor( $container.scrollTop() / $container.height()) + 1;
+  return Math.floor($container.scrollTop() / $container.height()) + 1;
 }
 
 function getScrollForScreen(screen) {
-    return $container.scrollTop() - ($container.height() * screen) + $container.height();
+  return $container.scrollTop() - ($container.height() * screen) + $container.height();
 }
 
 function getPercent(scrollForScreen) {
-    return (100 * scrollForScreen - $container.height()) / $container.height();
+  return (100 * scrollForScreen - $container.height()) / $container.height();
 }
 
 function getRoundPosition(direction) {
-    switch (direction) {
-        case 'top-right':
-            return '100% 0%';
-        case 'bottom-left':
-            return '0% 100%';
-        case 'bottom-right':
-            return '100% 100%';
-        default:
-            return '0% 0%';
-    }
+  switch (direction) {
+    case 'top-right':
+      return '100% 0%';
+    case 'bottom-left':
+      return '0% 100%';
+    case 'bottom-right':
+      return '100% 100%';
+    default:
+      return '0% 0%';
+  }
 }
 
 $(document).ready(function() {
-    $container.css({
-        'max-height': $('.wrapper').height() - ($('nav').height() + 10),
-        'height': $('.wrapper').height() - ($('nav').height() + 10)
-    });
+  $container.css({
+    'max-height': $('.wrapper').height() - ($('nav').height() + 10),
+    'height': $('.wrapper').height() - ($('nav').height() + 10)
+  });
 
-    $('.wrapper-scroll').height($container.height() * screen_total);
+  $('.wrapper-scroll').height($container.height() * screen_total);
 
-    $container.scroll(function(e) {
-        var scrollTop = $container.scrollTop();
-        if($container.scrollTop() >=  $('.wrapper-scroll').height() - $container.height()) {
-            $container.scrollTop(LAST_SCROLL_TOP);
-        } else {
-            LAST_SCROLL_TOP = scrollTop;
-        }
-        // console.log(e);
-        // console.log(this);
-        screen_number = checkScreenNumber();
-        animateRounds();
-        animateSquares();
-    });
+  $container.scroll(function(e) {
+    var scrollTop = $container.scrollTop();
+    if ($container.scrollTop() >= $('.wrapper-scroll').height() - $container.height()) {
+      $container.scrollTop(LAST_SCROLL_TOP);
+    } else {
+      LAST_SCROLL_TOP = scrollTop;
+    }
+    // console.log(e);
+    // console.log(this);
+    screen_number = checkScreenNumber();
+    animateRounds();
+    animateSquares();
+  });
 });

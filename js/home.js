@@ -1,7 +1,5 @@
 $(document).ready(function() {
 
-  $("#Box").hide();
-
   //initialize swiper when document ready
   var mySwiper = new Swiper('.swiper-container', {
     direction: 'vertical',

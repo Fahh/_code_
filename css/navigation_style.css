@@ -12,6 +12,22 @@ html, body {
   position: relative;
 } */
 
+#pp {
+  top: -1.1em;
+  left: -3.3em;
+  padding-top: 1em;
+  font-family: "Open Sans", Helvetica, Arial, sans-serif;
+  color: black;
+  letter-spacing: 0.10em;
+  font-weight: lighter;
+  font-size: 1.1rem;
+  text-transform: none;
+  width: 15em;
+  height: 5em;
+  text-align: center;
+  position: relative;
+}
+
 img {
   -moz-user-select: none;
   -webkit-user-select: none;
@@ -22,6 +38,23 @@ img {
   -webkit-touch-callout: none;
 }
 
+#scrollTop{
+  bottom: 40px;
+  left: 38%;
+  width: 8.5em;
+  height: 2.75em;
+  background: black;
+  position: relative;
+  color: white;
+  border: 1px solid black;
+  font-family: "Open Sans", Helvetica, Arial, sans-serif;
+  letter-spacing: 0.15em;
+  font-weight: lighter;
+  font-size: 1.75em;
+  text-transform: none;
+  /* z-index: 9999; */
+}
+
 #collection_txt {
   position: relative;
   width: 80%;
@@ -30,7 +63,7 @@ img {
   top: 17%;
   overflow: hidden;
   text-align: center;
-  border: 1px solid black;
+  /* border: 1px solid black; */
 }
 
 #scroll_txt {
@@ -64,11 +97,12 @@ overflow: hidden;
 
 .wrapper {
   position: absolute;
-  top: 50%;
-  left: 50%;
+  top: 48%;
+  left: 48%;
   margin-top: -32rem;
   margin-left: -18rem;
   width: 38rem;
+  /* height: 80%; */
   height: 67.5rem;
   border: 1px solid black;
 }
@@ -157,10 +191,18 @@ section:first-of-type {
 .container_button {
   display: inline;
   width: 100%;
+  /* top: 74em; */
   top: 83em;
   left: 1.25%;
   position: relative;
   z-index: 100;
+}
+@media screen and (max-height: 650px) {
+  .container_button {
+    /* display: none; */
+    top: 74em;
+
+  }
 }
 
 #sendButton,

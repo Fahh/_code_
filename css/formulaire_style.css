@@ -1,4 +1,27 @@
-#sentMessage{
+#message {
+  font-family: "Open Sans", Helvetica, Arial, sans-serif;
+  color: black;
+  letter-spacing: 0.15em;
+  font-weight: lighter;
+  font-size: 2em;
+  text-transform: none;
+}
+#email{
+  font-family: "Open Sans", Helvetica, Arial, sans-serif;
+  color: black;
+  letter-spacing: 0.15em;
+  font-weight: lighter;
+  font-size: 1.5em;
+  text-transform: none;
+
+}
+#name {
+  font-family: "Open Sans", Helvetica, Arial, sans-serif;
+  color: black;
+  letter-spacing: 0.15em;
+  font-weight: lighter;
+  font-size: 1.5em;
+  text-transform: none;
 
 }
 
@@ -6,7 +29,7 @@
   text-align: center;
   position: relative;
   display: inline-flex;
-  top: 15em;
+  top: 5em;
   left: 15%;
   width: 100%;
 }

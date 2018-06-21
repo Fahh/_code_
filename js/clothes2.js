@@ -81,6 +81,7 @@ var ly = 0;
 $(".interactive").on("touchstart", function(e) {
   //console.log("TOUCHSTART .interactive");
   // console.log("Mobile : touchstart")
+
   var clientX = e.originalEvent.touches[0].clientX;
   var clientY = e.originalEvent.touches[0].clientY;
 
@@ -236,6 +237,8 @@ function selectMove(x, y) {
   touchmove = true;
   //console.log("selectmove");
   if (selectLine) { // Draw only if selectLine already exists
+    $(".box").hide();
+
     selectLine.setAttributeNS(null, "stroke-width", "5");
     selectLine.setAttributeNS(null, "x2", x);
     selectLine.setAttributeNS(null, "y2", y);
@@ -260,12 +263,15 @@ function selectMove(x, y) {
 }
 
 function selectEnd(currentElement) {
-  console.log("selectEnd");
+  // console.log("selectEnd");
 
   if (touchstart) {
     if (!touchmove) {
+      $(".box").hide();
+
       console.log("Normal touch");
       if (previousId != -1 && previousId != firstId) {
+
         $("[data-id=" + previousId + "]").removeClass("bordered");
       }
       $(".selected").removeClass("selected");
@@ -274,7 +280,7 @@ function selectEnd(currentElement) {
       displayClotheSimple();
 
     } else {
-      console.log("Interactive touch");
+      // console.log("Interactive touch");
 
       //console.log("selectEnd");
       if (!firstId || !currentElement.classList.contains("interactive")) {
@@ -315,7 +321,7 @@ function selectEnd(currentElement) {
 function displayClotheSimple() {
 
   //console.log("Normal touch");
-  console.log("Open Image   " + firstId);
+  // console.log("Open Image   " + firstId);
 
   var goodside = "img_vet_full/" + firstId + ".jpg";
   var reversedside = "img_vet_full_reverse/" + firstId + "_reverse.jpg";
@@ -361,15 +367,13 @@ function displayClothe() {
 // elButtonBuy.addEventListener('click', displayOrderForm);
 
 $('#buy').click(function() {
-  console.log("click");
   displayOrderForm();
 })
 $('#backButton').click(function() {
-  console.log("click back");
   displayBack();
 })
 $('.item1, .item2, .item3, .item4').click(function() {
-  console.log("click back");
+  // console.log("click back");
   displayBack();
 })
 
