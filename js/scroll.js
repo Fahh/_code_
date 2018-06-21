@@ -219,17 +219,18 @@ var $arrow2 = $('#arrow2');
 var arrowScrollInterval;
 var momentInterval = 0;
 function launchArrowScroll() {
-    arrowScrollInterval = setInterval(function() {
-        momentInterval += .1;
-        var a1 = 73;
-        var a2 = 75;
-        if(momentInterval > 3) {
-            momentInterval = 0;
-        }
-        a1 += momentInterval;
-        a2 += momentInterval;
-
-        $arrow1.css({'top': a1 + 'vh'});
-        $arrow2.css({'top': a2 + 'vh'});
-    }, 50);
+    // arrowScrollInterval = setInterval(function() {
+    //     momentInterval += .1;
+    //     console.log()
+    //     var a1 = !window.matchMedia('@media screen and (orientation: portrait)').matches ? 63 : 73;
+    //     var a2 = !window.matchMedia('@media screen and (orientation: portrait)').matches ? 65 : 75;
+    //     if(momentInterval > 3) {
+    //         momentInterval = 0;
+    //     }
+    //     a1 += momentInterval;
+    //     a2 += momentInterval;
+    //
+    //     $arrow1.css({'top': a1 + 'vh'});
+    //     $arrow2.css({'top': a2 + 'vh'});
+    // }, 50);
 }
