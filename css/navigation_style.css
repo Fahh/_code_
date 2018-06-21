@@ -56,13 +56,15 @@ img {
 }
 
 #collection_txt {
-  position: relative;
-  width: 80%;
+  position: fixed;
+    width: 38rem;
   padding: 4em;
-  left: 10%;
-  top: 17%;
+  /*left: 10%;*/
+  /*top: 17%;*/
   overflow: hidden;
   text-align: center;
+    z-index: 9999;
+
   /* border: 1px solid black; */
 }
 

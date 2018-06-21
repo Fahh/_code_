@@ -163,8 +163,11 @@ function getRoundPosition(direction) {
       return '0% 0%';
   }
 }
-
+var $scrollTextTitle = $('#collection_txt');
+var $scrollScreenDown = $('#scrollScreenDown');
 $(document).ready(function() {
+
+  launchArrowScroll();
   $container.css({
     'max-height': $('.wrapper').height() - ($('nav').height() + 10),
     'height': $('.wrapper').height() - ($('nav').height() + 10)
@@ -174,10 +177,31 @@ $(document).ready(function() {
 
   $container.scroll(function(e) {
     var scrollTop = $container.scrollTop();
-    if ($container.scrollTop() >= $('.wrapper-scroll').height() - $container.height()) {
+    if (scrollTop >= $('.wrapper-scroll').height() - $container.height()) {
       $container.scrollTop(LAST_SCROLL_TOP);
+
     } else {
       LAST_SCROLL_TOP = scrollTop;
+    }
+
+    if(scrollTop > 50) {
+        $scrollTextTitle.fadeOut(700);
+        $scrollScreenDown.fadeOut(700);
+        $arrow1.fadeOut(700);
+        $arrow2.fadeOut(700);
+        if(arrowScrollInterval !== undefined) {
+            clearInterval(arrowScrollInterval);
+            arrowScrollInterval = undefined;
+        }
+
+    } else {
+        $scrollTextTitle.fadeIn(700);
+        $scrollScreenDown.fadeIn(700);
+        $arrow1.fadeIn(700);
+        $arrow2.fadeIn(700);
+        if(arrowScrollInterval === undefined) {
+            launchArrowScroll();
+        }
     }
     // console.log(e);
     // console.log(this);
@@ -186,3 +210,26 @@ $(document).ready(function() {
     animateSquares();
   });
 });
+
+// top: 84vh;
+var $arrow1 = $('#arrow1');
+// top: 86vh;
+var $arrow2 = $('#arrow2');
+
+var arrowScrollInterval;
+var momentInterval = 0;
+function launchArrowScroll() {
+    arrowScrollInterval = setInterval(function() {
+        momentInterval += .1;
+        var a1 = 73;
+        var a2 = 75;
+        if(momentInterval > 3) {
+            momentInterval = 0;
+        }
+        a1 += momentInterval;
+        a2 += momentInterval;
+
+        $arrow1.css({'top': a1 + 'vh'});
+        $arrow2.css({'top': a2 + 'vh'});
+    }, 50);
+}
